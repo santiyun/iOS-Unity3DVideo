@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -33,6 +33,7 @@ public class XcodeProject : MonoBehaviour {
 			proj.AddFrameworkToProject (target, "libxml2.tbd", false);
 			proj.AddFrameworkToProject (target, "libz.tbd", false);
 			proj.AddFrameworkToProject (target, "ReplayKit.framework", false);
+            proj.AddFrameworkToProject (target, "CoreTelephony.framework", false);
 
 			File.WriteAllText (projPath, proj.WriteToString ());
 
